@@ -21,7 +21,7 @@
         </TextBox>
         <Button Background="Green" Content="Start" HorizontalAlignment="Left" Margin="324,270,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-2.313,-1.027" Click="Start"/>
         <Button Background="red" Content="Stop" HorizontalAlignment="Left" Margin="421,270,0,0" VerticalAlignment="Top" Width="75" Click="Stop"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,94,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="340"/>
+        <TextBox Text="{Binding Path=ServicePath, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="10,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="340"/>
         <Label Content="Path" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
         <Label Content="Service url" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="88"/>
         <Label Content="Speed" HorizontalAlignment="Left" Height="26" Margin="10,133,0,0" VerticalAlignment="Top" Width="58"/>
@@ -30,5 +30,6 @@
         <TextBox Name="speedBox" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="63,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
         <Image Name="image" HorizontalAlignment="Left" Height="254" Margin="539,36,0,0" VerticalAlignment="Top" Width="414" 
                Source="{Binding Path=ImageSource, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+        <Button Content="{Binding Path=PauseResumeLabel,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Margin="225,270,0,0" VerticalAlignment="Top" Width="75" Click="Pause"/>
     </Grid>
 </Window>
