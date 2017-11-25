@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\Parker\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\Parker\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\Parker\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\Parker\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88EED7CE-DC8F-44C2-B57C-A357AC954F1F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Parker_new</RootNamespace>
+    <AssemblyName>Parker new</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Parker\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Parker\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Parker\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Parker\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\Parker\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\..\Parker\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\..\Parker\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\..\Parker\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\..\Parker\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\..\Parker\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\..\Parker\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\..\Parker\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\..\Parker\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReadFilesController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0209_20171122_073012.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0210_20171122_073022.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0211_20171122_073032.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0212_20171122_073042.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0213_20171122_073052.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0214_20171122_073102.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0215_20171122_073112.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0216_20171122_073122.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0217_20171122_073132.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0218_20171122_073142.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0219_20171122_073152.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0220_20171122_073203.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0221_20171122_073213.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0222_20171122_073223.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0223_20171122_073233.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0224_20171122_073243.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0225_20171122_073253.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0226_20171122_073303.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0227_20171122_073313.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0228_20171122_073323.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0229_20171122_073333.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0230_20171122_073343.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0231_20171122_073353.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0232_20171122_073403.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0233_20171122_073413.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0234_20171122_073423.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0235_20171122_073433.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0236_20171122_073443.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0237_20171122_073453.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0238_20171122_073503.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0239_20171122_073513.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0240_20171122_073523.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0241_20171122_073533.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0242_20171122_073543.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0243_20171122_073553.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0244_20171122_073603.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0245_20171122_073613.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0246_20171122_073623.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0247_20171122_073633.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0248_20171122_073643.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0249_20171122_073653.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0250_20171122_073703.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0251_20171122_073713.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0252_20171122_073723.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0253_20171122_073733.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0254_20171122_073743.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0255_20171122_073753.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0256_20171122_073803.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0257_20171122_073813.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0258_20171122_073823.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0259_20171122_073833.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0260_20171122_073843.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0261_20171122_073853.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0262_20171122_073903.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0263_20171122_073913.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0264_20171122_073923.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0265_20171122_073933.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0266_20171122_073943.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0267_20171122_073953.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0268_20171122_074003.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0269_20171122_074013.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0270_20171122_074023.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0271_20171122_074033.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0272_20171122_074043.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0273_20171122_074053.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0274_20171122_074103.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0275_20171122_074113.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0276_20171122_074123.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0277_20171122_074133.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0278_20171122_074143.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0279_20171122_074153.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0280_20171122_074203.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0281_20171122_074213.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0282_20171122_074223.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0283_20171122_074233.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0284_20171122_074243.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0285_20171122_074253.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0286_20171122_074303.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0287_20171122_074313.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0288_20171122_074323.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0289_20171122_074333.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0290_20171122_074343.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0291_20171122_074353.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0292_20171122_074403.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0293_20171122_074413.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0294_20171122_074423.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0295_20171122_074433.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0296_20171122_074443.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0297_20171122_074453.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0298_20171122_074503.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0299_20171122_074513.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0300_20171122_074523.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0301_20171122_074533.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0302_20171122_074543.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0303_20171122_074553.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0304_20171122_074603.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0305_20171122_074613.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0306_20171122_074623.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0307_20171122_074633.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0308_20171122_074643.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0309_20171122_074653.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0310_20171122_074703.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0311_20171122_074713.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0312_20171122_074723.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0313_20171122_074733.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0314_20171122_074743.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0315_20171122_074753.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0316_20171122_074803.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0317_20171122_074814.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0318_20171122_074824.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0319_20171122_074834.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0320_20171122_074844.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0321_20171122_074854.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0322_20171122_074904.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0323_20171122_074914.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0324_20171122_074924.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0325_20171122_074934.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0326_20171122_074944.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0327_20171122_074954.jpg" />
+    <Content Include="Photos\Marinel%27s home\tl_0037_0328_20171122_075004.jpg" />
+    <Content Include="Photos\Work\2017-11-21-15-57-00-366.jpg" />
+    <Content Include="Photos\Work\2017-11-21-15-57-34-182.jpg" />
+    <Content Include="Photos\Work\2017-11-21-15-58-03-007.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-01-44-974.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-02-29-582.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-02-33-102.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-02-33-503.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-05-49-247.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-05-50-399.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-05-55-991.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-06-11-120.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-06-30-544.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-06-50-440.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-06-57-214.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-07-00-409.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-07-09-248.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-07-14-711.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-07-17-974.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-07-28-671.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-07-37-110.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-07-42-446.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-07-47-681.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-07-55-702.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-04-558.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-08-935.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-10-566.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-11-886.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-13-127.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-14-839.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-17-758.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-18-415.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-26-574.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-27-103.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-28-926.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-30-614.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-32-215.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-33-366.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-34-086.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-08-44-310.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-12-35-559.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-17-00-431.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-23-31-888.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-27-00-458.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-37-00-489.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-47-00-515.jpg" />
+    <Content Include="Photos\Work\2017-11-21-16-57-00-544.jpg" />
+    <Content Include="Photos\Work\2017-11-21-17-07-00-546.jpg" />
+    <Content Include="Photos\Work\2017-11-21-17-17-00-580.jpg" />
+    <Content Include="Photos\Work\2017-11-21-17-27-00-600.jpg" />
+    <Content Include="Photos\Work\2017-11-21-17-37-00-644.jpg" />
+    <Content Include="Photos\Work\2017-11-21-17-47-00-674.jpg" />
+    <Content Include="Photos\Work\2017-11-21-17-57-00-690.jpg" />
+    <Content Include="Photos\Work\2017-11-21-18-07-00-716.jpg" />
+    <Content Include="Photos\Work\2017-11-21-18-17-00-742.jpg" />
+    <Content Include="Photos\Work\2017-11-21-18-27-00-782.jpg" />
+    <Content Include="Photos\Work\2017-11-21-18-37-00-808.jpg" />
+    <Content Include="Photos\Work\2017-11-21-18-47-00-853.jpg" />
+    <Content Include="Photos\Work\2017-11-21-18-57-00-912.jpg" />
+    <Content Include="Photos\Work\2017-11-21-19-07-00-950.jpg" />
+    <Content Include="Photos\Work\2017-11-21-19-17-00-990.jpg" />
+    <Content Include="Photos\Work\2017-11-21-19-27-01-034.jpg" />
+    <Content Include="Photos\Work\2017-11-21-19-37-01-076.jpg" />
+    <Content Include="Photos\Work\2017-11-21-19-47-01-120.jpg" />
+    <Content Include="Photos\Work\2017-11-21-19-57-01-177.jpg" />
+    <Content Include="Photos\Work\2017-11-21-20-07-01-225.jpg" />
+    <Content Include="Photos\Work\2017-11-21-20-17-01-261.jpg" />
+    <Content Include="Photos\Work\2017-11-21-20-27-01-294.jpg" />
+    <Content Include="Photos\Work\2017-11-21-20-37-01-345.jpg" />
+    <Content Include="Photos\Work\2017-11-21-20-47-01-384.jpg" />
+    <Content Include="Photos\Work\2017-11-21-20-57-01-435.jpg" />
+    <Content Include="Photos\Work\2017-11-21-21-07-01-475.jpg" />
+    <Content Include="Photos\Work\2017-11-21-21-17-01-531.jpg" />
+    <Content Include="Photos\Work\2017-11-21-21-27-01-577.jpg" />
+    <Content Include="Photos\Work\2017-11-21-21-37-01-606.jpg" />
+    <Content Include="Photos\Work\2017-11-21-21-47-01-656.jpg" />
+    <Content Include="Photos\Work\2017-11-21-21-57-01-700.jpg" />
+    <Content Include="Photos\Work\2017-11-21-22-07-01-741.jpg" />
+    <Content Include="Photos\Work\2017-11-21-22-17-01-784.jpg" />
+    <Content Include="Photos\Work\2017-11-21-22-27-01-816.jpg" />
+    <Content Include="Photos\Work\2017-11-21-22-37-01-863.jpg" />
+    <Content Include="Photos\Work\2017-11-21-22-47-01-897.jpg" />
+    <Content Include="Photos\Work\2017-11-21-22-57-01-935.jpg" />
+    <Content Include="Photos\Work\2017-11-21-23-07-01-982.jpg" />
+    <Content Include="Photos\Work\2017-11-21-23-17-02-002.jpg" />
+    <Content Include="Photos\Work\2017-11-21-23-27-02-039.jpg" />
+    <Content Include="Photos\Work\2017-11-21-23-37-02-073.jpg" />
+    <Content Include="Photos\Work\2017-11-21-23-47-02-109.jpg" />
+    <Content Include="Photos\Work\2017-11-21-23-57-02-139.jpg" />
+    <Content Include="Photos\Work\2017-11-22-00-07-02-188.jpg" />
+    <Content Include="Photos\Work\2017-11-22-00-17-02-233.jpg" />
+    <Content Include="Photos\Work\2017-11-22-00-27-02-272.jpg" />
+    <Content Include="Photos\Work\2017-11-22-00-37-02-313.jpg" />
+    <Content Include="Photos\Work\2017-11-22-00-47-02-351.jpg" />
+    <Content Include="Photos\Work\2017-11-22-00-57-02-391.jpg" />
+    <Content Include="Photos\Work\2017-11-22-01-07-02-425.jpg" />
+    <Content Include="Photos\Work\2017-11-22-01-17-02-468.jpg" />
+    <Content Include="Photos\Work\2017-11-22-01-27-02-515.jpg" />
+    <Content Include="Photos\Work\2017-11-22-01-37-02-568.jpg" />
+    <Content Include="Photos\Work\2017-11-22-01-47-02-615.jpg" />
+    <Content Include="Photos\Work\2017-11-22-01-57-02-683.jpg" />
+    <Content Include="Photos\Work\2017-11-22-02-07-02-720.jpg" />
+    <Content Include="Photos\Work\2017-11-22-02-17-02-754.jpg" />
+    <Content Include="Photos\Work\2017-11-22-02-27-02-795.jpg" />
+    <Content Include="Photos\Work\2017-11-22-02-37-02-842.jpg" />
+    <Content Include="Photos\Work\2017-11-22-02-47-02-883.jpg" />
+    <Content Include="Photos\Work\2017-11-22-02-57-02-928.jpg" />
+    <Content Include="Photos\Work\2017-11-22-03-07-02-947.jpg" />
+    <Content Include="Photos\Work\2017-11-22-03-17-03-014.jpg" />
+    <Content Include="Photos\Work\2017-11-22-03-27-03-058.jpg" />
+    <Content Include="Photos\Work\2017-11-22-03-37-03-102.jpg" />
+    <Content Include="Photos\Work\2017-11-22-03-47-03-152.jpg" />
+    <Content Include="Photos\Work\2017-11-22-03-57-03-193.jpg" />
+    <Content Include="Photos\Work\2017-11-22-04-07-03-246.jpg" />
+    <Content Include="Photos\Work\2017-11-22-04-17-03-288.jpg" />
+    <Content Include="Photos\Work\2017-11-22-04-27-03-325.jpg" />
+    <Content Include="Photos\Work\2017-11-22-04-37-03-389.jpg" />
+    <Content Include="Photos\Work\2017-11-22-04-47-03-407.jpg" />
+    <Content Include="Photos\Work\2017-11-22-04-57-03-444.jpg" />
+    <Content Include="Photos\Work\2017-11-22-05-07-03-495.jpg" />
+    <Content Include="Photos\Work\2017-11-22-05-17-03-540.jpg" />
+    <Content Include="Photos\Work\2017-11-22-05-27-03-569.jpg" />
+    <Content Include="Photos\Work\2017-11-22-05-37-03-600.jpg" />
+    <Content Include="Photos\Work\2017-11-22-05-47-03-650.jpg" />
+    <Content Include="Photos\Work\2017-11-22-05-57-03-683.jpg" />
+    <Content Include="Photos\Work\2017-11-22-06-07-03-708.jpg" />
+    <Content Include="Photos\Work\2017-11-22-06-17-03-748.jpg" />
+    <Content Include="Photos\Work\2017-11-22-06-27-03-800.jpg" />
+    <Content Include="Photos\Work\2017-11-22-06-37-03-849.jpg" />
+    <Content Include="Photos\Work\2017-11-22-06-47-03-898.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Photos\Colibita\Colibita.json" />
+    <Content Include="Photos\Colibita Lego\Colibita Lego.json" />
+    <Content Include="Photos\Marinel%27s home\Marinel%27s home.json" />
+    <Content Include="Photos\Work\Work.json" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53794</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53794/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\Parker\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Parker\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\Parker\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Parker\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
