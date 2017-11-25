@@ -14,6 +14,12 @@ namespace Parker.Controllers
     [Route("api/RecieveFiles")]
     public class RecieveFilesController : Controller
     {
+        [HttpGet("")]
+        public IActionResult Get()
+        {
+            return Ok();
+        }
+
         [HttpPost("{location}")]
         public IActionResult Post(string location)
         {
@@ -21,10 +27,10 @@ namespace Parker.Controllers
 
             var currentDirectory = Directory.GetCurrentDirectory();
             var filePath = currentDirectory + "/Photos/" + location +"/"+ uploadedFile.FileName;
-            (new FileInfo(filePath)).Directory.Create();
+            //(new FileInfo(filePath)).Directory.Create();
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
-                uploadedFile.CopyToAsync(stream);
+                uploadedFile.CopyTo(stream);
             }
 
             return Ok();

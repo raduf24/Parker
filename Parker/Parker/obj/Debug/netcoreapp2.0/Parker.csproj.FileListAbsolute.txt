@@ -9,3 +9,14 @@ E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.AssemblyInfoInputs.cache
 E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.AssemblyInfo.cs
 E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.dll
 E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.pdb
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.deps.json
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.runtimeconfig.json
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.runtimeconfig.dev.json
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.dll
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.pdb
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.csprojResolveAssemblyReference.cache
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.csproj.CoreCompileInputs.cache
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.AssemblyInfoInputs.cache
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.AssemblyInfo.cs
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.dll
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.pdb
