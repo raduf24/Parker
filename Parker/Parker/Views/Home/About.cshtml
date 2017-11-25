@@ -1,7 +1,16 @@
 ﻿@{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "Upload Image";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
-
-<p>Use this area to provide additional information.</p>
+<form method="post" enctype="multipart/form-data" asp-route="api/RecieveFiles/Colibita">
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Upload file:</p>
+            <input type="file" name="file" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" value="Upload" />
+        </div>
+    </div>
+</form>
