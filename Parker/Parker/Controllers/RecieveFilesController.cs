@@ -17,13 +17,14 @@ namespace Parker.Controllers
         [HttpPost("{location}")]
         public IActionResult Post(string location)
         {
-            var file = Request.Form.Files[0];
+            var uploadedFile = Request.Form.Files[0];
 
             var currentDirectory = Directory.GetCurrentDirectory();
-            var filePath = currentDirectory + "/Photos/" + location +"/"+ file.FileName;
+            var filePath = currentDirectory + "/Photos/" + location +"/"+ uploadedFile.FileName;
+            (new FileInfo(filePath)).Directory.Create();
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
-                file.CopyToAsync(stream);
+                uploadedFile.CopyToAsync(stream);
             }
 
             return Ok();
