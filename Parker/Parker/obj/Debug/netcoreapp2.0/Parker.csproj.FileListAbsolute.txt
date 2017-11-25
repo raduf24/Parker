@@ -1,0 +1,11 @@
+E:\Parker\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.deps.json
+E:\Parker\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.runtimeconfig.json
+E:\Parker\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.runtimeconfig.dev.json
+E:\Parker\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.dll
+E:\Parker\Parker\Parker\bin\Debug\netcoreapp2.0\Parker.pdb
+E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.csprojResolveAssemblyReference.cache
+E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.csproj.CoreCompileInputs.cache
+E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.AssemblyInfoInputs.cache
+E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.AssemblyInfo.cs
+E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.dll
+E:\Parker\Parker\Parker\obj\Debug\netcoreapp2.0\Parker.pdb
