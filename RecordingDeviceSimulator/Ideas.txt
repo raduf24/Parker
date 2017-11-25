@@ -1,10 +1,13 @@
 Scop :
 1. Aplicatie care sa faca call catre un api sau web service si care sa trimita pozele una cate una sa simuleze un dispozitiv care filmeaza
 
-1.1. Desktop app care sa poti sa selectezi calea de unde sa iti faca play la pozele
-1.2. posibilitate de start, stop
+1.1 Desktop app care sa poti sa selectezi calea de unde sa iti faca play la pozele
+1.2 posibilitate de start, stop
 1.3 posibilitate de speeup sau slow down la stream-ul de pozele
 1.4 creat un api endpoint
 1.5 Configurare imaginea de la care sa porneasca
 1.6 configurabil url unde sa faci post 
 1.7 configurabila sa fie pus in url de post si numele device-ului
+
+
+D:\WORK\ISDC\InnovationLab\Parker2\Parker\Parker\Photos\Work
